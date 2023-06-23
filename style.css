@@ -1,0 +1,107 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+
+ 
+.tab { 
+    max-width: 100%; 
+    
+} 
+ 
+.tab .tab_btns { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  background: #40E0D0; 
+
+} 
+ 
+.tab .tab_btns .tab_btns-item  { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    cursor: pointer; 
+    color: #fff; 
+    padding: 16px;
+    
+} 
+
+
+.tab .tab_btns .tab_btns-item:hover { 
+    background: #429a91;; 
+} 
+ 
+ 
+.tab .tab_btns .tab_btns-item.active_btn { 
+    background: #429a91; 
+} 
+ 
+ 
+.tab_content .tab_content-item{ 
+    display: none; 
+    padding: 16px; 
+    text-align: justify; 
+    font-size: 18px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    letter-spacing: 1px; 
+    line-height: 50px; 
+    background: #1b6c64;; 
+    color: #ddd; 
+} 
+
+
+ 
+.tab_content .tab_content-item.active_tab { 
+    display: block; 
+}
+
+
+.plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: antiquewhite;
+    
+}
+
+.plus:hover {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.tab_content .tab_content-item.active_tab .script {
+  display: none;
+  margin: 20px auto;
+  font-size: 2rem;
+  
+  
+}
+
+#script {
+   display: none;
+   margin: 5px auto;
+}
+
+.creat_btn {
+    margin: 5px auto;
+  
+    background: #40E0D0;
+    cursor: pointer;
+    border-radius: 10%;
+    font-size: 2rem;
+    padding: 4px;
+    display: none;
+}
+
+.copyy {
+    cursor: pointer;
+    padding: 3px;
+}
+
+.copyy:hover {
+    background: #fff;
+}
