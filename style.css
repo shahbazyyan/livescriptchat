@@ -105,3 +105,18 @@
 .copyy:hover {
     background: #fff;
 }
+
+.copy_btn {
+    cursor: pointer;
+    margin: 2px;
+    border: none;
+    padding: 2px;
+}
+
+.copy_btn:hover {
+  background: #beb4b4;
+}
+
+h5 {
+    display: none;
+}

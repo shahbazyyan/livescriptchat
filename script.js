@@ -6,6 +6,7 @@ const text = document.getElementById("script");
 const btn = document.querySelector(".creat_btn");
 const myText = document.querySelectorAll("p");
 const copy = document.querySelectorAll(".copyy");
+const h5 = document.querySelector("h5");
  
 function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
     contents[initial].classList.add(contentClassName); 
@@ -36,14 +37,13 @@ const text_content = document.querySelector(".text_content");
 
 copyButton.addEventListener("click", function() {
   const text = text_content.innerText;
+  h5.style.display = "block";
 
   navigator.clipboard.writeText(text)
-    .then(function() {
-      alert("Text copied successfully!");
-    })
-    .catch(function(err) {
-      console.error("Unable to copy text:", err);
-    });
+  
 });
 
-console.log(text_content);
+copyButton.addEventListener("mouseenter", function() {
+    h5.style.display = "none";
+})
+
