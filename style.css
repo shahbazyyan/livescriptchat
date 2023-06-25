@@ -108,9 +108,9 @@
 
 .copy_btn {
     cursor: pointer;
-    margin: 2px;
     border: none;
     padding: 2px;
+    
 }
 
 .copy_btn:hover {
@@ -118,5 +118,25 @@
 }
 
 h5 {
+    display: none;
+}
+
+.text_content {
+    cursor: pointer;
+}
+
+.text_content:hover {
+    color: #aca6a6;
+}
+
+.dropTab {
+    cursor: pointer;
+    background: #dbd7d7;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.dropTab_content {
     display: none;
 }

@@ -7,7 +7,11 @@ const btn = document.querySelector(".creat_btn");
 const myText = document.querySelectorAll("p");
 const copy = document.querySelectorAll(".copyy");
 const h5 = document.querySelector("h5");
+const dropTab = document.querySelector(".dropTab");
+const dropTab_content = document.querySelector(".dropTab_content");
  
+console.log(dropTab);
+
 function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
     contents[initial].classList.add(contentClassName); 
     buttons[initial].classList.add(buttonsClassName); 
@@ -32,18 +36,25 @@ plus.addEventListener("click", () => {
   btn.style.display = "block"; 
 });
 
+
 const copyButton = document.querySelector(".copy_btn");
 const text_content = document.querySelector(".text_content");
 
-copyButton.addEventListener("click", function() {
-  const text = text_content.innerText;
-  h5.style.display = "block";
-
-  navigator.clipboard.writeText(text)
+// text_content.forEach.addEventListener("click", function() {
+//   const text = text_content.innerText;
   
-});
 
-copyButton.addEventListener("mouseenter", function() {
-    h5.style.display = "none";
-})
+//   navigator.clipboard.writeText(text);
+  
+// });
+
+dropTab.addEventListener("click", () => {
+  dropTab_content.style.display = "block";
+});
+dropTab.addEventListener("dblclick", () => {
+  dropTab_content.style.display = "none";
+});
+// copyButton.addEventListener("mouseenter", function() {
+//     h5.style.display = "none";
+// })
 
