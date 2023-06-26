@@ -107,3 +107,22 @@ btn.addEventListener("click", function () {
    myNewScripts.appendChild(list);
  }
 });
+
+
+document.getElementById("searchButton").addEventListener("click", performSearch);
+
+function performSearch() {
+  const searchInput = document.getElementById("searchInput").value;
+  const searchResults = document.getElementById("searchResults");
+
+  const regex = new RegExp(searchInput, "g");
+  const text = document.getElementById("textToSearch").textContent;
+  const matches = text.match(regex);
+
+  if (matches) {
+    const highlightedText = text.replace(regex, '<span class="highlight">$&</span>');
+    searchResults.innerHTML = highlightedText;
+  } else {
+    searchResults.innerHTML = "No matches found.";
+  }
+}

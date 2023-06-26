@@ -4,7 +4,10 @@
     box-sizing: border-box; 
 } 
  
-
+body {
+    background: #1b6c64;
+    padding: 5px;
+}
  
 .tab { 
     max-width: 100%; 
@@ -194,3 +197,26 @@ h5 {
     font-size: 2rem;
 }
 
+.highlight {
+    background-color: yellow;
+    font-size: 1.2rem;
+  }
+
+#searchInput {
+    display: inline-block;
+    margin: 5px auto;
+    padding: 5px;
+
+  }
+
+#searchButton {
+    display: inline-block;
+    margin: 5px auto;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 400px;
+}
+
+#searchResults {
+    font-size: 1rem;
+}
