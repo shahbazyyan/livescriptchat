@@ -140,3 +140,27 @@ h5 {
 .dropTab_content {
     display: none;
 }
+
+.dropTab1 {
+    cursor: pointer;
+    background: #dbd7d7;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.dropTab_content1 {
+    display: none;
+}
+
+.dropTab2 {
+    cursor: pointer;
+    background: #dbd7d7;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.dropTab_content2 {
+    display: none;
+}
