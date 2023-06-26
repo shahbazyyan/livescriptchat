@@ -44,13 +44,13 @@ plus.addEventListener("click", () => {
 const copyButton = document.querySelector(".copy_btn");
 const text_content = document.querySelector(".text_content");
 
-// text_content.forEach.addEventListener("click", function() {
-//   const text = text_content.innerText;
+text_content.addEventListener("click", function() {
+  const text = text_content.innerText;
   
 
-//   navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(text);
   
-// });
+});
 
 dropTab.addEventListener("click", () => {
   dropTab_content.style.display = "block";
@@ -72,7 +72,12 @@ dropTab2.addEventListener("click", () => {
 dropTab2.addEventListener("dblclick", () => {
   dropTab_content2.style.display = "none";
 });
-// copyButton.addEventListener("mouseenter", function() {
-//     h5.style.display = "none";
-// })
+
+copyButton.addEventListener("click", function() {
+  h5.style.display = "block";
+})
+
+copyButton.addEventListener("mouseenter", function() {
+    h5.style.display = "none";
+})
 
