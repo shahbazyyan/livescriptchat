@@ -13,8 +13,12 @@ const dropTab1 = document.querySelector(".dropTab1");
 const dropTab_content1 = document.querySelector(".dropTab_content1");
 const dropTab_content2 = document.querySelector(".dropTab_content2");
 const dropTab2 = document.querySelector(".dropTab2");
+const dropTab_content3 = document.querySelector(".dropTab_content3");
+const dropTab3 = document.querySelector(".dropTab3");
+const dropTab_content4 = document.querySelector(".dropTab_content4");
+const dropTab4 = document.querySelector(".dropTab4");
+const myNewScripts = document.querySelector(".myNewScripts");
 
- 
 
 function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
     contents[initial].classList.add(contentClassName); 
@@ -40,14 +44,16 @@ plus.addEventListener("click", () => {
   btn.style.display = "block"; 
 });
 
+plus.addEventListener("mouseenter", () => {
+  text.style.display = "none"; 
+  btn.style.display = "none"; 
+});
 
 const copyButton = document.querySelector(".copy_btn");
 const text_content = document.querySelector(".text_content");
 
 text_content.addEventListener("click", function() {
   const text = text_content.innerText;
-  
-
   navigator.clipboard.writeText(text);
   
 });
@@ -73,11 +79,31 @@ dropTab2.addEventListener("dblclick", () => {
   dropTab_content2.style.display = "none";
 });
 
-copyButton.addEventListener("click", function() {
-  h5.style.display = "block";
-})
+dropTab3.addEventListener("click", () => {
+  dropTab_content3.style.display = "block";
+});
+dropTab3.addEventListener("dblclick", () => {
+  dropTab_content3.style.display = "none";
+});
+
+
 
 copyButton.addEventListener("mouseenter", function() {
-    h5.style.display = "none";
-})
+  h5.style.display = "block";
+});
 
+copyButton.addEventListener("mouseleave", function() {
+    h5.style.display = "none";
+});
+
+
+btn.addEventListener("click", function () {
+
+ if (text.value === "") {
+  alert("Write something!")
+ } else {
+   let list = document.createElement("p");
+   list.innerHTML =  text.value;
+   myNewScripts.appendChild(list);
+ }
+});

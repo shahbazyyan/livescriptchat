@@ -84,6 +84,7 @@
 #script {
    display: none;
    margin: 5px auto;
+   font-size: 20px;
 }
 
 .creat_btn {
@@ -164,3 +165,32 @@ h5 {
 .dropTab_content2 {
     display: none;
 }
+
+.dropTab3 {
+    cursor: pointer;
+    background: #dbd7d7;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.dropTab_content3 {
+    display: none;
+}
+
+.dropTab4 {
+    cursor: pointer;
+    background: #dbd7d7;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.dropTab_content4 {
+    display: none;
+}
+
+.myNewScripts {
+    font-size: 2rem;
+}
+
