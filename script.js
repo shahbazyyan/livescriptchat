@@ -7,8 +7,8 @@ const btn = document.querySelector(".creat_btn");
 const myText = document.querySelectorAll("p");
 const copy = document.querySelectorAll(".copyy");
 const h5 = document.querySelector("h5");
-const dropTab = document.querySelector(".dropTab");
-const dropTab_content = document.querySelector(".dropTab_content");
+const dropTab = document.querySelectorAll(".dropTab");
+const dropTab_content = document.querySelectorAll(".dropTab_content");
 const dropTab1 = document.querySelector(".dropTab1");
 const dropTab_content1 = document.querySelector(".dropTab_content1");
 const dropTab_content2 = document.querySelector(".dropTab_content2");
@@ -58,12 +58,27 @@ text_content.addEventListener("click", function() {
   
 });
 
-dropTab.addEventListener("click", () => {
-  dropTab_content.style.display = "block";
-});
-dropTab.addEventListener("dblclick", () => {
-  dropTab_content.style.display = "none";
-});
+
+dropTab.forEach(function (i) {
+  i.addEventListener("click", () => {
+    dropTab_content.style.display = "block";
+  })
+})
+
+dropTab.forEach(function (i) {
+  i.addEventListener("click", () => {
+    dropTab_content.style.display = "none";
+  })
+})
+
+
+
+// dropTab.addEventListener("click", () => {
+//   dropTab_content.style.display = "block";
+// });
+// dropTab.addEventListener("dblclick", () => {
+//   dropTab_content.style.display = "none";
+// });
 
 dropTab1.addEventListener("click", () => {
   dropTab_content1.style.display = "block";
