@@ -20,6 +20,7 @@ const dropTab4 = document.querySelector(".dropTab4");
 const myNewScripts = document.querySelector(".myNewScripts");
 
 
+
 function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
     contents[initial].classList.add(contentClassName); 
     buttons[initial].classList.add(buttonsClassName); 
@@ -39,12 +40,13 @@ function tabInit(initial, buttons, contents, contentClassName, buttonsClassName)
  
 tabInit(0, btns, contents, "active_tab", "active_btn");
 
+
 plus.addEventListener("click", () => {
   text.style.display = "block"; 
   btn.style.display = "block"; 
 });
 
-plus.addEventListener("mouseenter", () => {
+plus.addEventListener("dblclick", () => {
   text.style.display = "none"; 
   btn.style.display = "none"; 
 });

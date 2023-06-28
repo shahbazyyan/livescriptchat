@@ -66,6 +66,7 @@ b {
 }
 
 
+
 .plus{
     display: flex;
     justify-content: center;
@@ -91,12 +92,13 @@ b {
 #script {
    display: none;
    margin: 5px auto;
-   font-size: 20px;
+   font-size: 18px;
+
 }
+
 
 .creat_btn {
     margin: 5px auto;
-  
     background: #40E0D0;
     cursor: pointer;
     border-radius: 10%;
@@ -230,3 +232,4 @@ h5 {
 #searchResults {
     font-size: 1rem;
 }
+
