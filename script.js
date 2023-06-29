@@ -9,14 +9,6 @@ const copy = document.querySelectorAll(".copyy");
 const h5 = document.querySelector("h5");
 const dropTab = document.querySelectorAll(".dropTab");
 const dropTab_content = document.querySelectorAll(".dropTab_content");
-const dropTab1 = document.querySelector(".dropTab1");
-const dropTab_content1 = document.querySelector(".dropTab_content1");
-const dropTab_content2 = document.querySelector(".dropTab_content2");
-const dropTab2 = document.querySelector(".dropTab2");
-const dropTab_content3 = document.querySelector(".dropTab_content3");
-const dropTab3 = document.querySelector(".dropTab3");
-const dropTab_content4 = document.querySelector(".dropTab_content4");
-const dropTab4 = document.querySelector(".dropTab4");
 const myNewScripts = document.querySelector(".myNewScripts");
 
 
@@ -61,47 +53,18 @@ text_content.addEventListener("click", function() {
 });
 
 
-dropTab.forEach(function (i) {
-  i.addEventListener("click", () => {
-    dropTab_content.style.display = "block";
-  })
-})
-
-dropTab.forEach(function (i) {
-  i.addEventListener("click", () => {
-    dropTab_content.style.display = "none";
-  })
-})
+for (let i = 0; i < dropTab.length; i++) {
+  dropTab[i].addEventListener("click", () => {
+    dropTab_content[i].style.display = "block";
+  });
+  dropTab[i].addEventListener("dblclick", () => {
+    dropTab_content[i].style.display = "none";
+  });
+}
 
 
 
-// dropTab.addEventListener("click", () => {
-//   dropTab_content.style.display = "block";
-// });
-// dropTab.addEventListener("dblclick", () => {
-//   dropTab_content.style.display = "none";
-// });
 
-dropTab1.addEventListener("click", () => {
-  dropTab_content1.style.display = "block";
-});
-dropTab1.addEventListener("dblclick", () => {
-  dropTab_content1.style.display = "none";
-});
-
-dropTab2.addEventListener("click", () => {
-  dropTab_content2.style.display = "block";
-});
-dropTab2.addEventListener("dblclick", () => {
-  dropTab_content2.style.display = "none";
-});
-
-dropTab3.addEventListener("click", () => {
-  dropTab_content3.style.display = "block";
-});
-dropTab3.addEventListener("dblclick", () => {
-  dropTab_content3.style.display = "none";
-});
 
 
 
@@ -116,8 +79,8 @@ copyButton.addEventListener("mouseleave", function() {
 
 btn.addEventListener("click", function () {
 
- if (text.value === "") {
-  alert("Write something!")
+ if (text.value === "" || text.value === "Պատուհանը չի կարող դատարկ լինել") {
+  script.innerText = "Պատուհանը չի կարող դատարկ լինել";
  } else {
    let list = document.createElement("p");
    list.innerHTML =  text.value;

@@ -92,7 +92,8 @@ b {
 #script {
    display: none;
    margin: 5px auto;
-   font-size: 18px;
+   font-size: 20px;
+   padding: 10px;
 
 }
 
