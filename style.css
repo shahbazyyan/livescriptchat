@@ -15,8 +15,15 @@ b {
  
 .tab { 
     max-width: 100%; 
-    
 } 
+
+img {
+    cursor: pointer;
+}
+
+img:hover {
+    margin-left: 3px;
+}
  
 .tab .tab_btns { 
   display: flex; 
@@ -128,10 +135,6 @@ b {
   background: #beb4b4;
 }
 
-h5 {
-    display: none;
-}
-
 .text_content {
     cursor: pointer;
 }
@@ -158,59 +161,11 @@ h5 {
     display: none;
 }
 
-.dropTab1 {
-    cursor: pointer;
-    background: #dbd7d7;
-    font-size: 1.5rem;
-    padding: 5px;
-    border: 1px solid #777;
-}
-
-.dropTab_content1 {
-    display: none;
-}
-
-.dropTab2 {
-    cursor: pointer;
-    background: #dbd7d7;
-    font-size: 1.5rem;
-    padding: 5px;
-    border: 1px solid #777;
-}
-
-.dropTab_content2 {
-    display: none;
-}
-
-.dropTab3 {
-    cursor: pointer;
-    background: #dbd7d7;
-    font-size: 1.5rem;
-    padding: 5px;
-    border: 1px solid #777;
-}
-
-.dropTab_content3 {
-    display: none;
-}
-
-.dropTab4 {
-    cursor: pointer;
-    background: #dbd7d7;
-    font-size: 1.5rem;
-    padding: 5px;
-    border: 1px solid #777;
-}
-
-.dropTab_content4 {
-    display: none;
-}
-
 .myNewScripts {
     font-size: 2rem;
 }
 
-.highlight {
+/* .highlight {
     background-color: yellow;
     font-size: 1.2rem;
   }
@@ -232,5 +187,8 @@ h5 {
 
 #searchResults {
     font-size: 1rem;
-}
+} */
 
+h5 {
+    display: none;
+}

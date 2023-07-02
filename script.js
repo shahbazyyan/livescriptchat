@@ -4,7 +4,6 @@ const plus = document.querySelector(".plus");
 const input = document.querySelector(".script");
 const text = document.getElementById("script");
 const btn = document.querySelector(".creat_btn");
-const myText = document.querySelectorAll("p");
 const copy = document.querySelectorAll(".copyy");
 const h5 = document.querySelector("h5");
 const dropTab = document.querySelectorAll(".dropTab");
@@ -43,14 +42,14 @@ plus.addEventListener("dblclick", () => {
   btn.style.display = "none"; 
 });
 
-const copyButton = document.querySelector(".copy_btn");
-const text_content = document.querySelector(".text_content");
+// const copyButton = document.querySelector(".copy_btn");
+// const text_content = document.querySelector(".text_content");
 
-text_content.addEventListener("click", function() {
-  const text = text_content.innerText;
-  navigator.clipboard.writeText(text);
+// text_content.addEventListener("click", function() {
+//   const text = text_content.innerText;
+//   navigator.clipboard.writeText(text);
   
-});
+// });
 
 
 for (let i = 0; i < dropTab.length; i++) {
@@ -68,13 +67,13 @@ for (let i = 0; i < dropTab.length; i++) {
 
 
 
-copyButton.addEventListener("mouseenter", function() {
-  h5.style.display = "block";
-});
+// copyButton.addEventListener("mouseenter", function() {
+//   h5.style.display = "block";
+// });
 
-copyButton.addEventListener("mouseleave", function() {
-    h5.style.display = "none";
-});
+// copyButton.addEventListener("mouseleave", function() {
+//     h5.style.display = "none";
+// });
 
 
 btn.addEventListener("click", function () {
@@ -89,20 +88,40 @@ btn.addEventListener("click", function () {
 });
 
 
-document.getElementById("searchButton").addEventListener("click", performSearch);
+// document.getElementById("searchButton").addEventListener("click", performSearch);
 
-function performSearch() {
-  const searchInput = document.getElementById("searchInput").value;
-  const searchResults = document.getElementById("searchResults");
+// function performSearch() {
+//   const searchInput = document.getElementById("searchInput").value;
+//   const searchResults = document.getElementById("searchResults");
 
-  const regex = new RegExp(searchInput, "g");
-  const text = document.getElementById("textToSearch").textContent;
-  const matches = text.match(regex);
+//   const regex = new RegExp(searchInput, "g");
+//   const text = document.getElementById("textToSearch").textContent;
+//   const matches = text.match(regex);
 
-  if (matches) {
-    const highlightedText = text.replace(regex, '<span class="highlight">$&</span>');
-    searchResults.innerHTML = highlightedText;
-  } else {
-    searchResults.innerHTML = "No matches found.";
-  }
+//   if (matches) {
+//     const highlightedText = text.replace(regex, '<span class="highlight">$&</span>');
+//     searchResults.innerHTML = highlightedText;
+//   } else {
+//     searchResults.innerHTML = "No matches found.";
+//   }
+// }
+
+const text_content = document.querySelectorAll("p")
+
+
+for (let i = 0; i < text_content.length; i++) {
+    text_content[i].addEventListener("click", function (){
+        const text = text_content[i].innerText;
+        navigator.clipboard.writeText(text);
+    } )
 }
+
+// for (let i = 0; i < text_content.length; i++) {
+//   text_content[i].addEventListener("mouseover", function (){
+//    h5.style.display = "block";
+
+//   })
+// }
+
+
+
