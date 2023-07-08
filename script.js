@@ -5,11 +5,11 @@ const input = document.querySelector(".script");
 const text = document.getElementById("script");
 const btn = document.querySelector(".creat_btn");
 const copy = document.querySelectorAll(".copyy");
-const h5 = document.querySelector("h5");
+// const h5 = document.querySelector("h5");
 const dropTab = document.querySelectorAll(".dropTab");
 const dropTab_content = document.querySelectorAll(".dropTab_content");
 const myNewScripts = document.querySelector(".myNewScripts");
-
+const img = document.querySelectorAll("img");
 
 
 function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
@@ -115,6 +115,7 @@ for (let i = 0; i < text_content.length; i++) {
         navigator.clipboard.writeText(text);
     } )
 }
+
 
 // for (let i = 0; i < text_content.length; i++) {
 //   text_content[i].addEventListener("mouseover", function (){
