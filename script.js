@@ -1,5 +1,5 @@
-const btns = document.querySelectorAll(".tab_btns-item"); 
-const contents = document.querySelectorAll(".tab_content-item"); 
+const btns = document.querySelectorAll(".tab_btns-item");
+const contents = document.querySelectorAll(".tab_content-item");
 const plus = document.querySelector(".plus");
 const input = document.querySelector(".script");
 const text = document.getElementById("script");
@@ -9,37 +9,44 @@ const copy = document.querySelectorAll(".copyy");
 const dropTab = document.querySelectorAll(".dropTab");
 const dropTab_content = document.querySelectorAll(".dropTab_content");
 const myNewScripts = document.querySelector(".myNewScripts");
-const img = document.querySelectorAll("img");
+const img = document.querySelector("img");
+const allP = document.querySelectorAll("p");
 
 
-function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) { 
-    contents[initial].classList.add(contentClassName); 
-    buttons[initial].classList.add(buttonsClassName); 
- 
-    for (let i = 0; i < buttons.length; i++) { 
- 
-        buttons[i].addEventListener("click", function () { 
-            for (let x = 0; x < buttons.length; x++) { 
-                buttons[x].classList.remove(buttonsClassName); 
-                contents[x].classList.remove(contentClassName); 
-            } 
-            buttons[i].classList.add(buttonsClassName); 
-            contents[i].classList.add(contentClassName); 
-        }); 
-    } 
-} 
- 
+allP.forEach(item => {
+  const imgClone = img.cloneNode(true); // Clone the img element
+  item.append(imgClone); // Insert the cloned img after the current p
+});
+
+
+function tabInit(initial, buttons, contents, contentClassName, buttonsClassName) {
+  contents[initial].classList.add(contentClassName);
+  buttons[initial].classList.add(buttonsClassName);
+
+  for (let i = 0; i < buttons.length; i++) {
+
+    buttons[i].addEventListener("click", function () {
+      for (let x = 0; x < buttons.length; x++) {
+        buttons[x].classList.remove(buttonsClassName);
+        contents[x].classList.remove(contentClassName);
+      }
+      buttons[i].classList.add(buttonsClassName);
+      contents[i].classList.add(contentClassName);
+    });
+  }
+}
+
 tabInit(0, btns, contents, "active_tab", "active_btn");
 
 
 plus.addEventListener("click", () => {
-  text.style.display = "block"; 
-  btn.style.display = "block"; 
+  text.style.display = "block";
+  btn.style.display = "block";
 });
 
 plus.addEventListener("dblclick", () => {
-  text.style.display = "none"; 
-  btn.style.display = "none"; 
+  text.style.display = "none";
+  btn.style.display = "none";
 });
 
 // const copyButton = document.querySelector(".copy_btn");
@@ -48,7 +55,7 @@ plus.addEventListener("dblclick", () => {
 // text_content.addEventListener("click", function() {
 //   const text = text_content.innerText;
 //   navigator.clipboard.writeText(text);
-  
+
 // });
 
 
@@ -78,13 +85,13 @@ for (let i = 0; i < dropTab.length; i++) {
 
 btn.addEventListener("click", function () {
 
- if (text.value === "" || text.value === "Պատուհանը չի կարող դատարկ լինել") {
-  script.innerText = "Պատուհանը չի կարող դատարկ լինել";
- } else {
-   let list = document.createElement("p");
-   list.innerHTML =  text.value;
-   myNewScripts.appendChild(list);
- }
+  if (text.value === "" || text.value === "Պատուհանը չի կարող դատարկ լինել") {
+    script.innerText = "Պատուհանը չի կարող դատարկ լինել";
+  } else {
+    let list = document.createElement("p");
+    list.innerHTML = text.value;
+    myNewScripts.appendChild(list);
+  }
 });
 
 
@@ -106,15 +113,32 @@ btn.addEventListener("click", function () {
 //   }
 // }
 
-const text_content = document.querySelectorAll("p")
-
+const text_content = document.querySelectorAll("p");
+const copied = document.querySelector(".copid");
 
 for (let i = 0; i < text_content.length; i++) {
-    text_content[i].addEventListener("click", function (){
-        const text = text_content[i].innerText;
-        navigator.clipboard.writeText(text);
-    } )
+  text_content[i].addEventListener("click", function () {
+    const text = text_content[i].innerText;
+    navigator.clipboard.writeText(text);
+    copied.style.display = "block";
+    
+    setTimeout(() => {
+      copied.style.display = "none";
+    }, 1000);
+  });
+   
 }
+
+// Get a reference to the button
+const scrollToTopButton = document.querySelector(".up");
+
+
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 
 // for (let i = 0; i < text_content.length; i++) {

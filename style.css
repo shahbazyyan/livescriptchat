@@ -18,10 +18,11 @@ b {
 
 img {
     cursor: pointer;
+    transition: .4s;
 }
 
 img:hover {
-    margin-left: 3px;
+    transform: scale(1.2);
 }
  
 .tab .tab_btns { 
@@ -97,6 +98,24 @@ img:hover {
   
 }
 
+.up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.up:hover {
+    background: #429a91;
+    transform: scale(1.1);
+}
+
 #script {
    display: none;
    margin: 5px auto;
@@ -152,12 +171,14 @@ img:hover {
     padding: 5px;
     border: none;
     border-radius: 3px;
-   
+    transition: .7s;
 }
+
+
 
 .dropTab:hover {
  background: #00fde4;
- padding: -5px;
+ transform: scale(1.2);
 }
 
 .dropTab_content {
@@ -192,6 +213,15 @@ img:hover {
     font-size: 1rem;
 } */
 
-h5 {
+.copid {
+    position: fixed;
+    top: 110px;
+    left: 1740px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
     display: none;
-}
+  }
+  
